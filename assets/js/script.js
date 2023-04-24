@@ -25,8 +25,7 @@ function shuffle(array) {
         currentIndex[rand] = currentIndex[i];
         currentIndex[i] = temp;
     }
-   // var shuffleArray
-    //shuffleArray.append(array);
+   
     return(currentIndex);
 };
 
@@ -38,6 +37,15 @@ function shuffleNodes() {
         deck.appendChild(nodes[i]);
         ++i;
     }
+}
+
+document.body.onload = start();
+
+function start() {
+    cardOpen = [];
+
+    cards = shuffle(cards);
+    shuffleNodes()
 }
 
 // toggles stated classes to flipped cards
