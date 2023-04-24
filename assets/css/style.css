@@ -30,3 +30,64 @@ h1 {
     background-color: white;
     border-radius: 10px;
 }
+
+/* game area */
+.game-area {
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+/* cards */
+.card {
+    background: white;
+}
+
+.card-front {
+    font-size: 36px;
+    color: #F28824;
+    letter-spacing: 3px;
+}
+
+.card-back {
+    font-size: 0px;
+}
+
+.card {
+    margin: 0.2rem 0.2rem;
+    cursor: pointer;
+    display: flex;
+    padding: 1em;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+    height: 70px;
+    width: calc(100% / 4 - 10px);
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 10px;
+    transform-style: preserve-3d;
+}
+
+.card .view {
+    position: absolute;
+    transition: transform 0.25s linear;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    user-select: none;
+    pointer-events: none;
+}
+
+.card-inner {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-evenly;
+    padding: 1em;
+    box-shadow: 8px 9px 26px 0 rgba(46, 61, 73, 0.5);
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 1em;
+    perspective: 800px;
+}
