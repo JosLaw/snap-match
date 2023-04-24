@@ -128,3 +128,45 @@ h1 {
     position: relative;
     font-size: 30px;
 }
+
+/* popups */
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    height: 30%;
+    width: 25%;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    background: #d2691e85;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10% auto;
+    text-align: center;
+}
+
+.popup h2 {
+    padding-bottom: 10px;
+    font-size: 50px;
+}
+
+button {
+    color: #F28824;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+/* footer */
+footer {
+    position: fixed;
+    bottom: 0;
+}

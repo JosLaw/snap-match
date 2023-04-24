@@ -67,13 +67,10 @@ function openCards() {
     }
 };
 
+// moves counter
 function changeCount() {
     moves++;
     count.innerHTML = "Moves: " + moves;
-    if (moves == 1) {
-        second = 30;
-        startTimer();
-    }
 };
 
 // game timer
@@ -83,9 +80,9 @@ var countdown = setInterval(startTimer, 1000);
 function startTimer() {
         timer.innerHTML = "Timer: " + second;
         second--;
-
-        stopTimer();
-    };
+    
+    stopTimer();
+};
 
 function stopTimer() {
     if (cardMatch.length === 12) {
@@ -135,6 +132,7 @@ function enable() {
     });
 }
 
+// click listeners
 cards.forEach(card => {
     card.addEventListener("click", flipCard);
     card.addEventListener("click", openCards);
