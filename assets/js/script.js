@@ -25,15 +25,15 @@ function shuffle(array) {
         currentIndex[rand] = currentIndex[i];
         currentIndex[i] = temp;
     }
-   
-    return(currentIndex);
+
+    return (currentIndex);
 };
 
 function shuffleNodes() {
     var nodes = deck.children, i = 0;
     nodes = Array.prototype.slice.call(nodes);
     nodes = shuffle(nodes);
-    while(i < nodes.length) {
+    while (i < nodes.length) {
         deck.appendChild(nodes[i]);
         ++i;
     }
@@ -43,7 +43,6 @@ document.body.onload = start();
 
 function start() {
     cardOpen = [];
-
     cards = shuffle(cards);
     shuffleNodes()
 }
@@ -68,6 +67,36 @@ function openCards() {
     }
 };
 
+function changeCount() {
+    moves++;
+    count.innerHTML = "Moves: " + moves;
+    if (moves == 1) {
+        second = 30;
+        startTimer();
+    }
+};
+
+// game timer
+var second = 30;
+var timer = document.querySelector(".timer");
+var countdown = setInterval(startTimer, 1000);
+function startTimer() {
+        timer.innerHTML = "Timer: " + second;
+        second--;
+
+        stopTimer();
+    };
+
+function stopTimer() {
+    if (cardMatch.length === 12) {
+        clearInterval(countdown);
+    }
+    else if (second == -1) {
+        clearInterval(countdown);
+    }
+}
+
+
 function match() {
     cardOpen[0].classList.add("match", "disable");
     cardOpen[1].classList.add("match", "disable");
@@ -87,6 +116,24 @@ function noMatch() {
         cardOpen = [];
     }, 800);
 };
+
+
+// make cards unclickable
+function disable() {
+    Array.prototype.filter.call(cards, function (card) {
+        card.classList.add('disable');
+    })
+}
+
+// make cards clickable
+function enable() {
+    Array.prototype.filter.call(cards, function (card) {
+        card.classList.remove('disable');
+        for (var i = 0; i < cardMatch.length; i++) {
+            cardMatch[i].classList.add("disable");
+        }
+    });
+}
 
 cards.forEach(card => {
     card.addEventListener("click", flipCard);
