@@ -91,3 +91,41 @@ h1 {
     margin-bottom: 1em;
     perspective: 800px;
 }
+
+/* turns cards */
+.card.open {
+    transform: rotateY(180deg);
+}
+
+.card.flipped .card-back {
+    font-size: 40px;
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
+}
+
+/* match and no mcatch styling */
+.card.match {
+    background: #5fdc46;
+    transform: rotateY(180deg);
+}
+
+.card.mismatch {
+    background: #7c1504;
+}
+
+.card-inner .card.disable {
+    pointer-events: none;
+}
+
+/* Timer and Score */
+.timer {
+    margin-right: 20%;
+    font-size: 30px;
+}
+
+.moves {
+    margin-left: 20%;
+    bottom: 35px;
+    position: relative;
+    font-size: 30px;
+}
