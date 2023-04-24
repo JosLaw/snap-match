@@ -68,6 +68,26 @@ function openCards() {
     }
 };
 
+function match() {
+    cardOpen[0].classList.add("match", "disable");
+    cardOpen[1].classList.add("match", "disable");
+    cardOpen[0].classList.remove("open");
+    cardOpen[1].classList.remove("open");
+    cardOpen = []
+};
+
+function noMatch() {
+    cardOpen[0].classList.add("mismatch");
+    cardOpen[1].classList.add("mismatch");
+    disable();
+    setTimeout(function () {
+        cardOpen[0].classList.remove("open", "flipped", "mismatch");
+        cardOpen[1].classList.remove("open", "flipped", "mismatch");
+        enable();
+        cardOpen = [];
+    }, 800);
+};
+
 cards.forEach(card => {
     card.addEventListener("click", flipCard);
     card.addEventListener("click", openCards);
