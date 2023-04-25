@@ -17,8 +17,6 @@ let cardOpen = [];
 
 let closebtn = document.getElementsByClassName(".closebtn");
 
-let close = document.querySelector(".close")
-
 let modal = document.getElementById("popup-one")
 
 // shuffles cards and returns the shuffled cards array
@@ -80,7 +78,8 @@ function changeCount() {
 };
 
 // game timer
-document.getElementById("play").addEventListener("click", function(){
+// document.getElementById("play").addEventListener("click", function(){
+    /*
     var second = 30;
     var timer = document.querySelector(".timer");
     var countdown = setInterval(startTimer, 1000);
@@ -90,8 +89,8 @@ document.getElementById("play").addEventListener("click", function(){
         
         stopTimer();
     };
-})
-
+//})
+*/
 
 function stopTimer() {
     if (cardMatch.length === 12) {
@@ -148,9 +147,8 @@ cards.forEach(card => {
 });
 
 // welcome modal
-
+let play = document.getElementById("play");
+play.addEventListener("click", closeModal);
 function closeModal(){
     modal.classList.add("close")
 }
-
-// onclick="document.getElementById('popup-one').style.display='none'"
