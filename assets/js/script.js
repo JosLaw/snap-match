@@ -15,6 +15,12 @@ let cardMatch = document.getElementsByClassName("match");
 // opened cards array
 let cardOpen = [];
 
+let closebtn = document.getElementsByClassName(".closebtn");
+
+let close = document.querySelector(".close")
+
+let modal = document.getElementById("popup-one")
+
 // shuffles cards and returns the shuffled cards array
 function shuffle(array) {
     var currentIndex = array.slice(0), temp, i = array.length, rand;
@@ -74,15 +80,18 @@ function changeCount() {
 };
 
 // game timer
-var second = 30;
-var timer = document.querySelector(".timer");
-var countdown = setInterval(startTimer, 1000);
-function startTimer() {
-        timer.innerHTML = "Timer: " + second;
-        second--;
-    
-    stopTimer();
-};
+document.getElementById("play").addEventListener("click", function(){
+    var second = 30;
+    var timer = document.querySelector(".timer");
+    var countdown = setInterval(startTimer, 1000);
+    function startTimer() {
+            timer.innerHTML = "Timer: " + second;
+            second--;
+        
+        stopTimer();
+    };
+})
+
 
 function stopTimer() {
     if (cardMatch.length === 12) {
@@ -137,3 +146,11 @@ cards.forEach(card => {
     card.addEventListener("click", flipCard);
     card.addEventListener("click", openCards);
 });
+
+// welcome modal
+
+function closeModal(){
+    modal.classList.add("close")
+}
+
+// onclick="document.getElementById('popup-one').style.display='none'"
