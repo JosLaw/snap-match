@@ -15,9 +15,7 @@ let cardMatch = document.getElementsByClassName("match");
 // opened cards array
 let cardOpen = [];
 
-let closebtn = document.getElementsByClassName(".closebtn");
-
-let modal = document.getElementById("popup-one")
+let modal = document.getElementById("popup-one");
 
 // shuffles cards and returns the shuffled cards array
 function shuffle(array) {
@@ -75,32 +73,35 @@ function openCards() {
 function changeCount() {
     moves++;
     count.innerHTML = "Moves: " + moves;
+    if (moves >= 1) {
+        startTimer()
+    }
 };
 
 // game timer
 // document.getElementById("play").addEventListener("click", function(){
-    /*
-    var second = 30;
-    var timer = document.querySelector(".timer");
-    var countdown = setInterval(startTimer, 1000);
-    function startTimer() {
-            timer.innerHTML = "Timer: " + second;
-            second--;
-        
-        stopTimer();
-    };
-//})
-*/
+// setInterval(startTimer, 1000)
+var second = 30;
+var timer = document.querySelector(".timer");
+var countdown;
+function startTimer() {
+    clearInterval(countdown)
+    countdown = setInterval(function () {
+        timer.innerHTML = "Timer: " + second;
+        second--;
+    }, 1000);
+
+    stopTimer();
+};
 
 function stopTimer() {
     if (cardMatch.length === 12) {
         clearInterval(countdown);
     }
-    else if (second == -1) {
+    else if (second === 0) {
         clearInterval(countdown);
     }
 }
-
 
 function match() {
     cardOpen[0].classList.add("match", "disable");
@@ -146,9 +147,14 @@ cards.forEach(card => {
     card.addEventListener("click", openCards);
 });
 
+cards.forEach(card => {
+    card.addEventListener("click", startTimer, { once: true });
+});
+
 // welcome modal
 let play = document.getElementById("play");
 play.addEventListener("click", closeModal);
-function closeModal(){
+
+function closeModal() {
     modal.classList.add("close")
 }
