@@ -93,8 +93,6 @@ function changeCount() {
 };
 
 // game timer
-// document.getElementById("play").addEventListener("click", function(){
-// setInterval(startTimer, 1000)
 var second = 30;
 var timer = document.querySelector(".timer");
 var countdown;
@@ -103,18 +101,14 @@ function startTimer() {
     countdown = setInterval(function () {
         timer.innerHTML = "Timer: " + second;
         second--;
+        if (cardMatch.length === 12) {
+            clearInterval(countdown);
+        } else if (second === -1) {
+            clearInterval(countdown);
+        }
     }, 1000);
-
-    stopTimer();
 };
 
-function stopTimer() {
-    if (cardMatch.length === 12) {
-        clearInterval(countdown);
-    } else if (second === 0) {
-        clearInterval(countdown);
-    }
-}
 
 function match() {
     cardOpen[0].classList.add("match", "disable");
@@ -153,13 +147,11 @@ function enable() {
     });
 }
 
-// click listeners
+// card click listeners
 cards.forEach(card => {
     card.addEventListener("click", flipCard);
     card.addEventListener("click", openCards);
 });
-
-
 
 // welcome modal
 let play = document.getElementById("play");
