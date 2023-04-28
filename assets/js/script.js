@@ -109,7 +109,6 @@ function startTimer() {
     }, 1000);
 };
 
-
 function match() {
     cardOpen[0].classList.add("match", "disable");
     cardOpen[1].classList.add("match", "disable");
@@ -170,4 +169,12 @@ restart.addEventListener("click", start);
 
 function closeModal() {
     modal.classList.add("close")
+}
+
+function gameOver() {
+    if (cardMatch.length === 12) {
+        alert("Congratulations!")
+    } else if (second === 0) {
+        alert("Game Over!");
+    }
 }
