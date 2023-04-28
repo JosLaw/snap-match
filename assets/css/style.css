@@ -171,7 +171,7 @@ h1 {
 }
 
 .closebtn {
-    font-size: 40px;
+    font-size: 50px;
     position: absolute;
     left: 60%;
 }
@@ -183,6 +183,28 @@ h1 {
 
 .close {
     display: none;
+}
+
+.fa-play {
+    font-size: 30px;
+    margin-right: 20vw;
+}
+
+.fa-play:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.fa-rotate {
+    font-size: 30px;
+    margin-left: 20vw;
+    bottom: 30px;
+    position: relative;
+}
+
+.fa-rotate:hover {
+    color: white;
+    cursor: pointer;
 }
 
 /* footer */

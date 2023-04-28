@@ -47,6 +47,23 @@ function start() {
     cardOpen = [];
     cards = shuffle(cards);
     shuffleNodes()
+    // removes addtional classes from cards
+    for (var i = 0; i < cards.length; i++) {
+        deck.innerHTML = "";
+        [].forEach.call(cards, function (item) {
+            deck.appendChild(item);
+        });
+        cards[i].classList.remove("flipped", "open", "match", "disable");
+    }
+    // reset moves
+    moves = 0;
+    count.innerHTML = "Moves: 0";
+
+    // reset timer
+    second = 30;
+    var timer = document.querySelector(".timer");
+    timer.innerHTML = "Timer: 30";
+    clearInterval(countdown);
 }
 
 // toggles stated classes to flipped cards
@@ -73,9 +90,6 @@ function openCards() {
 function changeCount() {
     moves++;
     count.innerHTML = "Moves: " + moves;
-    if (moves >= 1) {
-        startTimer()
-    }
 };
 
 // game timer
@@ -97,8 +111,7 @@ function startTimer() {
 function stopTimer() {
     if (cardMatch.length === 12) {
         clearInterval(countdown);
-    }
-    else if (second === 0) {
+    } else if (second === 0) {
         clearInterval(countdown);
     }
 }
@@ -123,7 +136,6 @@ function noMatch() {
     }, 800);
 };
 
-
 // make cards unclickable
 function disable() {
     Array.prototype.filter.call(cards, function (card) {
@@ -147,13 +159,22 @@ cards.forEach(card => {
     card.addEventListener("click", openCards);
 });
 
-cards.forEach(card => {
-    card.addEventListener("click", startTimer, { once: true });
-});
+
 
 // welcome modal
 let play = document.getElementById("play");
-play.addEventListener("click", closeModal);
+
+//play.addEventListener("click", closeModal);
+play.addEventListener('click', () => {
+    closeModal();
+    startTimer();
+});
+
+// play and restart buttons
+let playbtn = document.getElementById("playbtn")
+playbtn.addEventListener("click", startTimer);
+let restart = document.getElementById("restartbtn")
+restart.addEventListener("click", start);
 
 function closeModal() {
     modal.classList.add("close")
