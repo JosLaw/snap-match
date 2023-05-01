@@ -129,8 +129,7 @@ h1 {
     font-size: 30px;
 }
 
-/* popups */
-
+/* popup */
 .overlay {
     position: fixed;
     inset: 0;
@@ -210,4 +209,19 @@ h1 {
 footer {
     position: fixed;
     bottom: 0;
+}
+
+/* media quieries */
+@media (max-width: 400px) {
+    .popup {
+        width: 300px;
+    }
+
+    .closebtn {
+        left: 85%
+    }
+
+    .timer {
+        margin-right: 40%;
+    }
 }

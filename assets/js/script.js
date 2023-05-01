@@ -180,7 +180,7 @@ function gameOver() {
     setTimeout(function () {
         if (cardMatch.length === 12) {
             if (alerted === false) {
-                alert("Congratulations! 🎊 All the matches before the time ran out 😄");
+                alert("Congratulations! 🎊 All the matches found 😄");
             }
             alerted = true
         } else if (second === -1) {

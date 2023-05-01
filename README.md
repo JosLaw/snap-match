@@ -24,3 +24,5 @@ Flip cards - https://www.w3schools.com/howto/howto_css_flip_card.asp
 https://coolors.co/f28824-ffffff-e6e8e6-ced0ce-191919 
 https://fontawesome.com/ 
 https://codepen.io/zremboldt/pen/ZvQjOG
+emoji - https://emojipedia.org/grinning-face-with-smiling-eyes/
+code snippets - https://github.com/sandraisrael/Memory-Game-fend
