@@ -150,6 +150,7 @@ function enable() {
 cards.forEach(card => {
     card.addEventListener("click", flipCard);
     card.addEventListener("click", openCards);
+    card.addEventListener("click", gameOver);
 });
 
 // welcome modal
@@ -172,9 +173,11 @@ function closeModal() {
 }
 
 function gameOver() {
-    if (cardMatch.length === 12) {
-        alert("Congratulations!")
-    } else if (second === 0) {
-        alert("Game Over!");
-    }
-}
+    setTimeout(function () {
+        if (cardMatch.length === 12) {
+            alert("Congratulations! You found all the matches before the time ran out :D ")
+        } else if (second === -1) {
+            alert("Game Over! You ran out of time :(");
+        }
+    }, 3000)
+    };
