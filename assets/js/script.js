@@ -64,6 +64,9 @@ function start() {
     var timer = document.querySelector(".timer");
     timer.innerHTML = "Timer: 30";
     clearInterval(countdown);
+
+    // reset alerts
+    alerted = false;
 }
 
 // toggles stated classes to flipped cards
@@ -172,12 +175,19 @@ function closeModal() {
     modal.classList.add("close")
 }
 
+var alerted = false
 function gameOver() {
     setTimeout(function () {
         if (cardMatch.length === 12) {
-            alert("Congratulations! You found all the matches before the time ran out :D ")
+            if (alerted === false) {
+                alert("Congratulations! 🎊 All the matches before the time ran out 😄");
+            }
+            alerted = true
         } else if (second === -1) {
-            alert("Game Over! You ran out of time :(");
+            if (alerted === false) {
+                alert("Game Over! You ran out of time 😔");
+            }
+            alerted = true
         }
-    }, 3000)
-    };
+    }, 2000)
+};
