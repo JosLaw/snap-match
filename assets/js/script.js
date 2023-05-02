@@ -179,7 +179,7 @@ let restart = document.getElementById("restartbtn")
 restart.addEventListener("click", () => {
     start();
     disable();
-    tip()
+    tip();
 });
 
 function closeModal() {
@@ -208,4 +208,7 @@ function tip() {
     toolTip.classList.add("show");
 }
 
-closebtn.addEventListener("click", tip);
+closebtn.addEventListener("click", () => {
+    tip();
+    disable();
+});

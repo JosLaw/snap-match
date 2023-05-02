@@ -175,6 +175,7 @@ h1 {
 
 .tool-tip.show {
     visibility: visible;
+    font-size: 22px;
 }
 
 .closebtn {
@@ -194,7 +195,7 @@ h1 {
 
 .fa-play {
     font-size: 30px;
-    margin-right: 20vw;
+    margin-right: 15vw;
 }
 
 .fa-play:hover {
@@ -204,7 +205,7 @@ h1 {
 
 .fa-rotate {
     font-size: 30px;
-    margin-left: 20vw;
+    margin-left: 10vw;
     bottom: 30px;
     position: relative;
 }
