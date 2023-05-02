@@ -169,6 +169,18 @@ h1 {
     color: black;
 }
 
+#tip {
+    position: relative;
+    top: 30px;
+    left: 30px;
+}
+
+.restart {
+    position: relative;
+    font-size: 22px;
+    left: 13vw;
+}
+
 .tool-tip {
     visibility: hidden;
 }
@@ -221,16 +233,106 @@ footer {
 }
 
 /* media quieries */
-@media (max-width: 400px) {
+@media screen and (max-width: 350px) {
     .popup {
         width: 300px;
     }
 
     .closebtn {
-        left: 85%
+        left: 83%
+    }
+
+    .timer {
+        margin-right: 50%;
+    }
+
+    .restart {
+        position: relative;
+        font-size: 22px;
+        left: 90px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .closebtn {
+        left: 83%
     }
 
     .timer {
         margin-right: 40%;
+    }
+
+    .fa-play {
+        margin-right: 45vw;
+    }
+
+    .restart {
+        position: relative;
+        font-size: 22px;
+        left: 85px;
+    }
+}
+
+@media screen and (min-width: 450px) {
+    .closebtn {
+        left: 72%
+    }
+
+    .timer {
+        margin-right: 30%;
+    }
+
+    .fa-play {
+        margin-right: 45vw;
+    }
+
+    .restart {
+        position: relative;
+        font-size: 22px;
+        left: 90px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .closebtn {
+        left: 67%
+    }
+
+    .timer {
+        margin-right: 25%;
+    }
+
+    .fa-play {
+        margin-right: 30vw;
+    }
+
+    .restart {
+        position: relative;
+        font-size: 22px;
+        left: 17vw;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .closebtn {
+        left: 63%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .closebtn {
+        left: 63%;
+    }
+
+    .restart {
+        left: 13vw;
+    }
+
+    .fa-play {
+        margin-right: 20vw;
+    }
+
+    .popup {
+        width: 480px;
     }
 }

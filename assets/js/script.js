@@ -191,7 +191,7 @@ function gameOver() {
     setTimeout(function () {
         if (cardMatch.length === 12) {
             if (alerted === false) {
-                alert("Congratulations! 🎊 All the matches found 😄");
+                alert("Congratulations! 🎊 All matches found 😄");
             }
             alerted = true
         } else if (second === -1) {
@@ -208,7 +208,13 @@ function tip() {
     toolTip.classList.add("show");
 }
 
+function showPlayBtn() {
+playbtn.classList.remove("hide");
+}
+
 closebtn.addEventListener("click", () => {
     tip();
     disable();
+    showPlayBtn();
 });
+
