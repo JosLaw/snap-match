@@ -15,7 +15,9 @@ let cardMatch = document.getElementsByClassName("match");
 // opened cards array
 let cardOpen = [];
 
+// popup variables
 let modal = document.getElementById("popup-one");
+let closebtn = document.getElementById("close");
 
 // shuffles cards and returns the shuffled cards array
 function shuffle(array) {
@@ -67,6 +69,7 @@ function start() {
 
     // reset alerts
     alerted = false;
+
 }
 
 // toggles stated classes to flipped cards
@@ -108,6 +111,7 @@ function startTimer() {
             clearInterval(countdown);
         } else if (second === -1) {
             clearInterval(countdown);
+            gameOver()
         }
     }, 1000);
 };
@@ -167,9 +171,16 @@ play.addEventListener('click', () => {
 
 // play and restart buttons
 let playbtn = document.getElementById("playbtn")
-playbtn.addEventListener("click", startTimer);
+playbtn.addEventListener("click", () => {
+    startTimer();
+    enable();
+});
 let restart = document.getElementById("restartbtn")
-restart.addEventListener("click", start);
+restart.addEventListener("click", () => {
+    start();
+    disable();
+    tip()
+});
 
 function closeModal() {
     modal.classList.add("close")
@@ -191,3 +202,10 @@ function gameOver() {
         }
     }, 2000)
 };
+
+let toolTip = document.getElementById("tip");
+function tip() {
+    toolTip.classList.add("show");
+}
+
+closebtn.addEventListener("click", tip);
