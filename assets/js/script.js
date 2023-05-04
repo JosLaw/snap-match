@@ -184,24 +184,6 @@ restart.addEventListener("click", () => {
     tip();
 });
 
-// game over alerts
-var alerted = false
-function gameOver() {
-    setTimeout(function () {
-        if (cardMatch.length === 12) {
-            if (alerted === false) {
-                alert("Congratulations! 🎊 All matches found 😄");
-            }
-            alerted = true
-        } else if (second === -1) {
-            if (alerted === false) {
-                alert("Game Over! You ran out of time 😔");
-            }
-            alerted = true
-        }
-    }, 2000)
-};
-
 // start text to display or hide
 let toolTip = document.getElementById("tip");
 function tip() {
@@ -219,8 +201,26 @@ function closeModal() {
 
 // close button click listener
 closebtn.addEventListener("click", () => {
+    closeModal();
     tip();
     disable();
     showPlayBtn();
 });
 
+// game over alerts
+var alerted = false
+function gameOver() {
+    setTimeout(function () {
+        if (cardMatch.length === 12) {
+            if (alerted === false) {
+                alert("Congratulations! 🎊 All matches found 😄");
+            }
+            alerted = true
+        } else if (second === -1) {
+            if (alerted === false) {
+                alert("Game Over! You ran out of time 😔");
+            }
+            alerted = true
+        }
+    }, 2000)
+};
