@@ -30,11 +30,12 @@ Github
 [Flip Cards](https://www.w3schools.com/howto/howto_css_flip_card.asp) - Assist with flip card layout
 [Color Generator](https://coolors.co/f28824-ffffff-e6e8e6-ced0ce-191919) - Generate color
 [Font Awesome](https://fontawesome.com/) - Icons for the cards
-[Emojipedia](https://emojipedia.org/grinning-face-with-smiling-eyes/) - Emohi for the alert messages
+[Emojipedia](https://emojipedia.org/grinning-face-with-smiling-eyes/) - Emoji for the alert messages
 [Code Snippets](https://github.com/sandraisrael/Memory-Game-fend) - Code snippets for game functionality and layout of game area
-[Modal](http://www-db.deis.unibo.it/courses/TW/DOCS/w3schools/w3css/w3css_modal.asp.html#gsc.tab=0) - Create modal
+[Modal](https://www.w3schools.com/howto/howto_css_modals.asp) - Create modal
 [Multiple Functions](https://stackoverflow.com/questions/3910736/how-to-call-multiple-javascript-functions-in-onclick-event) - Code syntax to fire multiple functions
 [Countdown Timer](https://www.w3schools.com/jsref/met_win_setinterval.asp) - Code syntax for timer
 [Event Listeners](https://stackoverflow.com/questions/25028853/addeventlistener-two-functions) - Syntax for event listeners for mulitple functions
 [Timeout](https://www.w3schools.com/jsref/met_win_settimeout.asp) - Syntax for timeout on gameOver function
 [Alert](https://stackoverflow.com/questions/24768067/display-alert-only-once) - Solution to trigger alert once
+[Timer](https://stackoverflow.com/questions/31036619/timer-goes-twice-as-fast-when-triggered-again) - Solution to timer going twice as fast

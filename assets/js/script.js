@@ -190,10 +190,6 @@ function tip() {
     toolTip.classList.add("show");
 }
 
-function showPlayBtn() {
-    playbtn.classList.remove("hide");
-}
-
 // close button function
 function closeModal() {
     modal.classList.add("close")
@@ -204,8 +200,16 @@ closebtn.addEventListener("click", () => {
     closeModal();
     tip();
     disable();
-    showPlayBtn();
 });
+
+// click listener for click event outside of modal
+window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+      tip();
+      disable();
+    }
+  }
 
 // game over alerts
 var alerted = false
