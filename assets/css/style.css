@@ -118,7 +118,7 @@ h1 {
 
 /* Timer and Score */
 .timer {
-    margin-right: 18%;
+    padding-right: 20%;
     font-size: 30px;
 }
 
@@ -140,7 +140,7 @@ h1 {
 }
 
 .popup {
-    width: 70%;
+    width: 60%;
     font-size: 1.5em;
     letter-spacing: 1px;
     background: #d2691e99;
@@ -179,13 +179,13 @@ h1 {
 #tip {
     position: relative;
     top: 30px;
-    left: 30px;
+    left: 25px;
 }
 
 .restart {
     position: relative;
     font-size: 22px;
-    left: 13vw;
+    left: 17vw;
 }
 
 .tool-tip {
@@ -196,8 +196,6 @@ h1 {
     visibility: visible;
     font-size: 22px;
 }
-
-
 
 .close {
     display: none;
@@ -228,30 +226,23 @@ h1 {
 /* footer */
 footer {
     position: absolute;
+    bottom: 0;
 }
 
 /* media quieries */
 @media screen and (max-width: 350px) {
-    .popup {
-        width: 300px;
-    }
-
-    .timer {
-        margin-right: 50%;
-    }
-
     .restart {
         position: relative;
         font-size: 22px;
         left: 90px;
     }
+
+    footer {
+        bottom: auto;
+    }
 }
 
 @media screen and (max-width: 400px) {
-    .timer {
-        margin-right: 40%;
-    }
-
     .fa-play {
         margin-right: 45vw;
     }
@@ -261,13 +252,13 @@ footer {
         font-size: 22px;
         left: 85px;
     }
+
+    .timer {
+        padding-right: 50%;
+    }
 }
 
 @media screen and (min-width: 450px) {
-    .timer {
-        margin-right: 30%;
-    }
-
     .fa-play {
         margin-right: 45vw;
     }
@@ -275,15 +266,11 @@ footer {
     .restart {
         position: relative;
         font-size: 22px;
-        left: 90px;
+        left: 20vw
     }
 }
 
 @media screen and (min-width: 600px) {
-    .timer {
-        margin-right: 25%;
-    }
-
     .fa-play {
         margin-right: 30vw;
     }
@@ -302,9 +289,5 @@ footer {
 
     .fa-play {
         margin-right: 20vw;
-    }
-
-    .popup {
-        width: 480px;
     }
 }
