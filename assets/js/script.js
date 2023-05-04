@@ -209,7 +209,7 @@ function tip() {
 }
 
 function showPlayBtn() {
-playbtn.classList.remove("hide");
+    playbtn.classList.remove("hide");
 }
 
 closebtn.addEventListener("click", () => {
