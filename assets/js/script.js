@@ -19,6 +19,9 @@ let cardOpen = [];
 let modal = document.getElementById("popup-one");
 let closebtn = document.getElementById("close");
 
+// play button variable
+let play = document.getElementById("play");
+
 // shuffles cards and returns the shuffled cards array
 function shuffle(array) {
     var currentIndex = array.slice(0), temp, i = array.length, rand;
@@ -69,7 +72,6 @@ function start() {
 
     // reset alerts
     alerted = false;
-
 }
 
 // toggles stated classes to flipped cards
@@ -79,6 +81,7 @@ var flipCard = function () {
     this.classList.toggle("disable");
 };
 
+// flipped cards conditions for counter and matches
 function openCards() {
     cardOpen.push(this);
     var amount = cardOpen.length;
@@ -116,6 +119,7 @@ function startTimer() {
     }, 1000);
 };
 
+// match cards function
 function match() {
     cardOpen[0].classList.add("match", "disable");
     cardOpen[1].classList.add("match", "disable");
@@ -124,6 +128,7 @@ function match() {
     cardOpen = []
 };
 
+// mismatch cards function
 function noMatch() {
     cardOpen[0].classList.add("mismatch");
     cardOpen[1].classList.add("mismatch");
@@ -160,10 +165,7 @@ cards.forEach(card => {
     card.addEventListener("click", gameOver);
 });
 
-// welcome modal
-let play = document.getElementById("play");
-
-//play.addEventListener("click", closeModal);
+// play click listener
 play.addEventListener('click', () => {
     closeModal();
     startTimer();
@@ -182,10 +184,7 @@ restart.addEventListener("click", () => {
     tip();
 });
 
-function closeModal() {
-    modal.classList.add("close")
-}
-
+// game over alerts
 var alerted = false
 function gameOver() {
     setTimeout(function () {
@@ -203,6 +202,7 @@ function gameOver() {
     }, 2000)
 };
 
+// start text to display or hide
 let toolTip = document.getElementById("tip");
 function tip() {
     toolTip.classList.add("show");
@@ -212,6 +212,12 @@ function showPlayBtn() {
     playbtn.classList.remove("hide");
 }
 
+// close button function
+function closeModal() {
+    modal.classList.add("close")
+}
+
+// close button click listener
 closebtn.addEventListener("click", () => {
     tip();
     disable();

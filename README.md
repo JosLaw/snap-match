@@ -1,7 +1,7 @@
 # Snap Match
 This website is a card matching game. You have a limited amount of time to find all the pairs. This wesbite is aimed at people of all ages that would like to play a simple memory based game for entertainment purposes.
 
-Access the site here:
+Access the site here: https://joslaw.github.io/snap-match/
 <br>
 ## Goals/Expectations
 ## Design
