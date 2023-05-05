@@ -31,26 +31,62 @@ The game area is white with a box shadow around each card. This gives the illusi
 ### **Moves**
 The moves counter is in black to provide enough contrast from the bright orange background. The counter will go up when 2 cards are clicked to be assessed for matches
 ### **Timer**
-
----
-## Footer
+The timer counts down from 30 seconds. It is triggered after user clicks play on the modal, as well as when a user clicks the play icon after a game restart. It is stopped once the time runs out, or when all the card matches are found.
 
 ---
 ## Testing
+The site has been tested on a variety of devices and browsers to check the functionality and media queries work correctly. These include the following:
+
+* Laptop on Google Chrome and Microsoft Edge browsers
+* Android mobile phone on Google Chrome browser
+* Apple laptop on Google Chrome
+
+The deployed site was shared amongst family and friends to obtain user experience feedback. Overall the feedback was positive
 
 ---
 ## Bugs
+* The timer function was triggering more than once causing it to countdown twice as fast. This was resolved by clearing the timer immediately before it triggers.
+* The alerts were also firing more than once causing the alert window to not close despite clicking it multiple times. A boolean was added to function to ensure the alerts were only triggered once as intended.
+
 ---
 ## Validator Testing
+Lighthouse checks were conducted on the site, returning 75+ across the criteria
+
 ---
 ## Technologies
-* HTML
-* CSS
-* Javascript
-* Git
-* Github
+* HTML - Core structure of the site
+* CSS - Styling of the site
+* Javascript - Functionality and responsiveness of user initated interactions
+* Gitpages - Hosts the live site
+* Github - Stores the site code and logged versions
+* Codeanywhere - Cloud IDE used to write/design the site
 ---
 ## Deployment
+The project was deployed to GitHub Pages. The steps below explain the process.
+
+ - Log in to GitHub and locate the GitHub Repository
+ - At the top of the Repository (not top of page), locate the "Settings" button on the menu
+ - Scroll down the Settings page until you locate the "GitHub Pages" section
+ - Under "Branch", click the dropdowns to select "main" and "root"
+ - Click save
+ - Scroll up to locate the now published site link in the "GitHub Pages" section
+
+ Forking the GitHub Repository makes a copy of the original repository on the GitHub account to view and/or make changes without affecting the original repository. The steps below explain the process.
+
+ - Log in to GitHub and locate the GitHub Repository
+ - At the top of the Repository just above the "Settings" button on the menu, locate the "Fork" button
+ - You should now have a copy of the original repository in your GitHub account
+ 
+ Use the below steps to make a Local Clone
+
+ - Log in to GitHub and locate the GitHub Repository
+ - Under the repository name, click "Clone or download"
+ - To clone the repository using HTTPS, under "Clone with HTTPS", copy the link
+ - Open Git Bash
+ - Change the current working directory to the location where you want the cloned directory to be made
+ - Type git clone, and then paste the URL you copied in Step 3
+ - Press Enter. Your local clone will be created
+
 ---
 ## References/Credit
 1. [Google Fonts](https://fonts.google.com/) - Create and import font
