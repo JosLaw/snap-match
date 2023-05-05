@@ -143,7 +143,7 @@ h1 {
     width: 60%;
     font-size: 1.5em;
     letter-spacing: 1px;
-    background: #d2691e99;
+    background: #d2691ec8;
     margin: 10% auto;
     text-align: center;
     overflow: auto;
@@ -226,7 +226,6 @@ h1 {
 /* footer */
 footer {
     position: absolute;
-    bottom: 0;
 }
 
 /* media queries */
@@ -235,10 +234,6 @@ footer {
         position: relative;
         font-size: 22px;
         left: 90px;
-    }
-
-    footer {
-        bottom: auto;
     }
 }
 
@@ -267,6 +262,10 @@ footer {
         position: relative;
         font-size: 22px;
         left: 20vw
+    }
+
+    footer {
+        bottom: 0;
     }
 }
 
