@@ -225,7 +225,7 @@ h1 {
 
 /* footer */
 footer {
-    position: absolute;
+    position: relative;
 }
 
 /* media queries */
