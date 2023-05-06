@@ -1,28 +1,28 @@
-// array to hold cards
+// array to hold cards [7]
 const card = document.querySelectorAll(".card");
 let cards = [...card]
 
-// deck of cards
+// deck of cards [7]
 let deck = document.getElementById("card-deck");
 
-// move variable
+// move variable [7]
 let moves = 0;
 let count = document.querySelector(".moves")
 
-// matching cards variable
+// matching cards variable [7]
 let cardMatch = document.getElementsByClassName("match");
 
-// opened cards array
+// opened cards array [7]
 let cardOpen = [];
 
-// popup variables
-let modal = document.getElementById("popup-one");
+// popup variables [8]
+let modal = document.getElementById("popup");
 let closebtn = document.getElementById("close");
 
 // play button variable
 let play = document.getElementById("play");
 
-// shuffles cards and returns the shuffled cards array
+// shuffles cards and returns the shuffled cards array [15]
 function shuffle(array) {
     var currentIndex = array.slice(0), temp, i = array.length, rand;
 
@@ -52,7 +52,7 @@ function start() {
     cardOpen = [];
     cards = shuffle(cards);
     shuffleNodes()
-    // removes addtional classes from cards
+    // removes addtional classes from cards [7]
     for (var i = 0; i < cards.length; i++) {
         deck.innerHTML = "";
         [].forEach.call(cards, function (item) {
@@ -64,7 +64,7 @@ function start() {
     moves = 0;
     count.innerHTML = "Moves: 0";
 
-    // reset timer
+    // reset timer [7]
     second = 30;
     var timer = document.querySelector(".timer");
     timer.innerHTML = "Timer: 30";
@@ -74,14 +74,14 @@ function start() {
     alerted = false;
 }
 
-// toggles stated classes to flipped cards
+// toggles stated classes to flipped cards [7]
 var flipCard = function () {
     this.classList.toggle("open");
     this.classList.toggle("flipped");
     this.classList.toggle("disable");
 };
 
-// flipped cards conditions for counter and matches
+// flipped cards conditions for counter and matches [7]
 function openCards() {
     cardOpen.push(this);
     var amount = cardOpen.length;
@@ -119,7 +119,7 @@ function startTimer() {
     }, 1000);
 };
 
-// match cards function
+// match cards function [7]
 function match() {
     cardOpen[0].classList.add("match", "disable");
     cardOpen[1].classList.add("match", "disable");
@@ -128,7 +128,7 @@ function match() {
     cardOpen = []
 };
 
-// mismatch cards function
+// mismatch cards function [7]
 function noMatch() {
     cardOpen[0].classList.add("mismatch");
     cardOpen[1].classList.add("mismatch");
@@ -141,14 +141,14 @@ function noMatch() {
     }, 800);
 };
 
-// make cards unclickable
+// make cards unclickable [7]
 function disable() {
     Array.prototype.filter.call(cards, function (card) {
         card.classList.add('disable');
     })
 }
 
-// make cards clickable
+// make cards clickable [7]
 function enable() {
     Array.prototype.filter.call(cards, function (card) {
         card.classList.remove('disable');
