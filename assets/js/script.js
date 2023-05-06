@@ -1,13 +1,15 @@
+/*jshint esversion: 6 */
+
 // array to hold cards [7]
 const card = document.querySelectorAll(".card");
-let cards = [...card]
+let cards = [...card];
 
 // deck of cards [7]
 let deck = document.getElementById("card-deck");
 
 // move variable [7]
 let moves = 0;
-let count = document.querySelector(".moves")
+let count = document.querySelector(".moves");
 
 // matching cards variable [7]
 let cardMatch = document.getElementsByClassName("match");
@@ -34,7 +36,7 @@ function shuffle(array) {
     }
 
     return (currentIndex);
-};
+}
 
 function shuffleNodes() {
     var nodes = deck.children, i = 0;
@@ -51,7 +53,7 @@ document.body.onload = start();
 function start() {
     cardOpen = [];
     cards = shuffle(cards);
-    shuffleNodes()
+    shuffleNodes();
     // removes addtional classes from cards [7]
     for (var i = 0; i < cards.length; i++) {
         deck.innerHTML = "";
@@ -93,20 +95,20 @@ function openCards() {
             noMatch();
         }
     }
-};
+}
 
 // moves counter
 function changeCount() {
     moves++;
     count.innerHTML = "Moves: " + moves;
-};
+}
 
 // game timer
 var second = 30;
 var timer = document.querySelector(".timer");
 var countdown;
 function startTimer() {
-    clearInterval(countdown)
+    clearInterval(countdown);
     countdown = setInterval(function () {
         timer.innerHTML = "Timer: " + second;
         second--;
@@ -114,10 +116,10 @@ function startTimer() {
             clearInterval(countdown);
         } else if (second === -1) {
             clearInterval(countdown);
-            gameOver()
+            gameOver();
         }
     }, 1000);
-};
+}
 
 // match cards function [7]
 function match() {
@@ -125,8 +127,8 @@ function match() {
     cardOpen[1].classList.add("match", "disable");
     cardOpen[0].classList.remove("open");
     cardOpen[1].classList.remove("open");
-    cardOpen = []
-};
+    cardOpen = [];
+}
 
 // mismatch cards function [7]
 function noMatch() {
@@ -139,13 +141,13 @@ function noMatch() {
         enable();
         cardOpen = [];
     }, 800);
-};
+}
 
 // make cards unclickable [7]
 function disable() {
     Array.prototype.filter.call(cards, function (card) {
         card.classList.add('disable');
-    })
+    });
 }
 
 // make cards clickable [7]
@@ -172,12 +174,12 @@ play.addEventListener('click', () => {
 });
 
 // play and restart buttons
-let playbtn = document.getElementById("playbtn")
+let playbtn = document.getElementById("playbtn");
 playbtn.addEventListener("click", () => {
     startTimer();
     enable();
 });
-let restart = document.getElementById("restartbtn")
+let restart = document.getElementById("restartbtn");
 restart.addEventListener("click", () => {
     start();
     disable();
@@ -192,7 +194,7 @@ function tip() {
 
 // close button function
 function closeModal() {
-    modal.classList.add("close")
+    modal.classList.add("close");
 }
 
 // close button click listener
@@ -203,28 +205,28 @@ closebtn.addEventListener("click", () => {
 });
 
 // click listener for click event outside of modal
-window.onclick = function(event) {
+window.onclick = function (event) {
     if (event.target == modal) {
-      modal.style.display = "none";
-      tip();
-      disable();
+        modal.style.display = "none";
+        tip();
+        disable();
     }
-  }
+};
 
 // game over alerts
-var alerted = false
+var alerted = false;
 function gameOver() {
     setTimeout(function () {
         if (cardMatch.length === 12) {
             if (alerted === false) {
                 alert("Congratulations! 🎊 All matches found 😄");
             }
-            alerted = true
+            alerted = true;
         } else if (second === -1) {
             if (alerted === false) {
                 alert("Game Over! You ran out of time 😔");
             }
-            alerted = true
+            alerted = true;
         }
-    }, 2000)
-};
+    }, 2000);
+}
