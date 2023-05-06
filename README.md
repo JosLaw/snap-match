@@ -65,9 +65,19 @@ The deployed site was shared amongst family and friends to obtain user experienc
 * The timer function was triggering more than once causing it to countdown twice as fast. This was resolved by clearing the timer immediately before it triggers.
 * The alerts were also firing more than once causing the alert window to not close despite clicking it multiple times. A boolean was added to the function to ensure the alerts were only triggered once as intended. 
 
+* Following the initial html validator testing the type attribute to identify the cards was obsolete. To address the errors this attribute was removed, and the values were added to the class for each card instead. The openCard function was amended to check cards for matches.
+
 ---
 ## **Validator Testing**
-Lighthouse checks were conducted on the site, returning 75+ across the criteria.
+* HTML - Official W3C validator used. 13 errors and 1 info returned.Necessary changes made, detailed [here](bugs). Subsequent testing returned no errors or warnings.
+
+![screenshot of html validator report](assets/images/readme_docs/html_validator_ss.png)
+
+* CSS - Official Jigsaw validator used. No errors returned.
+
+![screenshot of css validator report](assets/images/readme_docs/css_validator_ss.png)
+
+* Accessibility - Lighthouse checks were conducted on the site, returning 75+ across the criteria.
 
 ![screenshot of lighthouse report](assets/images/readme_docs/lighthouse_ss.png)
 
