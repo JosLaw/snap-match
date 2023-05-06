@@ -26,6 +26,7 @@ The initial layout was planned using a programme called balsamiq to create the w
 ## **Features**
 ### **Header**
 The header contains the name of the game. The text is large in line with the colour palette, with a white background to make it stand out.
+
 ![screenshot of header](assets/images/readme_docs/header_ss.png)
 
 ### **Modal**
@@ -120,18 +121,18 @@ The project was deployed to GitHub Pages. The steps below explain the process.
 
 ---
 ## **References/Credit**
-1. [Google Fonts](https://fonts.google.com/) - Create and import font
+1. [Google Fonts](https://fonts.google.com/) - Import font used
 2. [Favicon](https://favicon.io/logo-generator/) - Create the favicon
 3. [Flip Cards](https://www.w3schools.com/howto/howto_css_flip_card.asp) - Assist with flip card layout
-4. [Color Generator](https://coolors.co/f28824-ffffff-e6e8e6-ced0ce-191919) - Generate color
+4. [Color Generator](https://coolors.co/f28824-ffffff-e6e8e6-ced0ce-191919) - Generate colour for background
 5. [Font Awesome](https://fontawesome.com/) - Icons for the cards
 6. [Emojipedia](https://emojipedia.org/grinning-face-with-smiling-eyes/) - Emoji for the alert messages
 7. [Code Snippets](https://github.com/sandraisrael/Memory-Game-fend) - Code snippets for game functionality and layout of game area
-8. [Modal](https://www.w3schools.com/howto/howto_css_modals.asp) - Create modal
+8. [Modal](https://www.w3schools.com/howto/howto_css_modals.asp) - Create the modal
 9. [Multiple Functions](https://stackoverflow.com/questions/3910736/how-to-call-multiple-javascript-functions-in-onclick-event) - Code syntax to fire multiple functions
-10. [Countdown Timer](https://www.w3schools.com/jsref/met_win_setinterval.asp) - Code syntax for timer
+10. [Countdown Timer](https://www.w3schools.com/jsref/met_win_setinterval.asp) - Code syntax for the timer
 11. [Event Listeners](https://stackoverflow.com/questions/25028853/addeventlistener-two-functions) - Syntax for event listeners for mulitple functions
-12. [Timeout](https://www.w3schools.com/jsref/met_win_settimeout.asp) - Syntax for timeout on gameOver function
-13. [Alert](https://stackoverflow.com/questions/24768067/display-alert-only-once) - Solution to trigger alert once
-14. [Timer](https://stackoverflow.com/questions/31036619/timer-goes-twice-as-fast-when-triggered-again) - Solution to timer going twice as fast
+12. [Timeout](https://www.w3schools.com/jsref/met_win_settimeout.asp) - Syntax for timeout on the gameOver function
+13. [Alert](https://stackoverflow.com/questions/24768067/display-alert-only-once) - Solution to trigger the alert once
+14. [Timer](https://stackoverflow.com/questions/31036619/timer-goes-twice-as-fast-when-triggered-again) - Solution to the timer going twice as fast
 15. [Shuffle](https://stackoverflow.com/questions/7070054/javascript-shuffle-html-list-element-order) - Code for the shuffle function
