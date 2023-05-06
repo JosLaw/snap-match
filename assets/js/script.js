@@ -81,13 +81,13 @@ var flipCard = function () {
     this.classList.toggle("disable");
 };
 
-// flipped cards conditions for counter and matches [7]
+// flipped cards conditions for counter and matches
 function openCards() {
     cardOpen.push(this);
     var amount = cardOpen.length;
     if (amount === 2) {
         changeCount();
-        if (cardOpen[0].type === cardOpen[1].type) {
+        if (cardOpen[0].classList.toString() === cardOpen[1].classList.toString()) {
             match();
         } else {
             noMatch();

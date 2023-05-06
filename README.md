@@ -27,10 +27,16 @@ The initial layout was planned using a programme called balsamiq to create the w
 ### **Header**
 The header contains the name of the game. The text is large in line witht he colour palette, with a white background to make it stand out.
 ![screenshot of header](assets/images/readme_docs/header_ss.png)
+
+### **Modal**
+The modal/popup is present on the site load. It covers the whole page in a translucent overlay, with the content in a smaller section atop an orange background. The content details the instructions of the game. Within that are two buttons, namely the close "x" button, and the "play" button. Each button has a hover feature which changes the colour of the text to notify the user that they can click on the text to trigger a response. Both buttons will close the popup to provide acccess to the game area. The play button will start the game timer, beginging the game immediately. Clicking the close button or anywhere on the outside of the content window will close the popup and trigger the start tool tip under the play icon. The cards are disabled until the play button is clicked.
+![screenshot of modal](assets/images/readme_docs/modal_ss.png)
+
 ### **Game**
 The game area is white with a box shadow around each card. This gives the illusion of raised elements. When two clicked cards are a match the background turns green. When the cards do not match the background turns red before the cards turn back to the front of the card.
 
 ![screenshot of game area](assets/images/readme_docs/gameplay_ss.png)
+
 ### **Moves**
 The moves counter is in black to provide enough contrast from the bright orange background. The counter will go up when 2 cards are clicked to be assessed for matches.
 
@@ -42,8 +48,8 @@ The timer counts down from 30 seconds. It is triggered after user clicks play on
 
 ### **Alerts**
 The two alerts will display after two conditions are met. One is for winning the game when all cards are matched, where as the other is for game over when the time runs out.
-
 ![screenshot of alerts](assets/images/readme_docs/alert_ss.png)
+
 ---
 ## **Testing**
 The site has been tested on a variety of devices and browsers to check the functionality and media queries work correctly. These include the following:
