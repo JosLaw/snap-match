@@ -1,21 +1,27 @@
 # **Snap Match**
-This website is a card matching game. You have a limited amount of time to find all the pairs. This website is aimed at people of all ages that would like to play a simple memory based game for entertainment purposes.
+This website is a card matching game. You have a limited amount of time to find all the pairs. This website is aimed at people of all ages that would like to play a quick and simple memory based game for entertainment purposes.
 
 Access the site here: <a href="https://joslaw.github.io/snap-match/" target="_blank">Snap Match</a>
 
 ![screenshot of a screen mockup of the game Snap Match](assets/images/readme_docs/screen-mockup.png)
-<br>
+
 ## **Goals/Expectations**
 1. Provide a set of matching cards for the game
 2. Set an achievable objective for the game i.e. a 30 second time limit to find all pairs
 3. Give visual feedback for user interaction. Red for unmatched cards, green for matched cards, and alerts for completion or game over
+4. Provide a restart feature that shuffles the deck to make the game replayable
 
+### **User Stories**
+1. As a player, I would like clear, identifiable pictures to remember when I click on the cards
+2. As a player, I would like to have a set objective to win the game
+3. As a player, I would like to know my progress throughout the game
+4. As a player, I would like to improve my performance via multiple tries at the game
 ---
 
 ## **Design**
 
 The website uses a basic colour palette of orange, white, and black, that is bright and vibrant to keep user attention. The font is an imported font called "Delicious Handrawn". The header is the reverse colours of the favicon, with the font colour of the rest of the text being black.
-The initial layout was planned using a programme called balsamiq to create the wireframe. The end product was adapted over the course of creation, and then further changed after user feedback. You can find the wireframe here: [wireframe](assets/images/readme_docs/wireframe_ss.png)
+The initial layout was planned using a programme called balsamiq to create the wireframe. The end product was adapted simplifiedover the course of creation, and then further changed after user feedback.  This was due to time constraints and creator understanding at the time of project creation.You can find the wireframe for the original concept here: [wireframe](/assets/images/readme_docs/wireframe_ss.png)
 
 ## Future Updates
 
@@ -34,7 +40,7 @@ The modal/popup is present on the site load. It covers the whole page in a trans
 ![screenshot of modal](assets/images/readme_docs/modal_ss.png)
 
 ### **Game**
-The game area is white with a box shadow around each card. This gives the illusion of raised elements. When two clicked cards match, the background turns green and the card's icons stay visible. When the cards do not match the background turns red before turning back to the front of the card.
+The game area is white with a box shadow around each card. This gives the illusion of raised elements. The front of the cards displays the logo as seen in the favicon, whereas the back displays coloured icons of animals or symbols. When two clicked cards match, the background turns green and the card's icons stay visible. When the cards do not match the background turns red before turning back to the front of the card.
 
 ![screenshot of game area](assets/images/readme_docs/gameplay_ss.png)
 
@@ -61,7 +67,7 @@ The site has been tested on a variety of devices and browsers to check the funct
 * Iphone on Google Chrome
 * Kindle on Silk browser
 
-The deployed site was shared amongst family and friends to obtain user experience feedback. Overall the feedback was positive and the main objectives of the game were achieved. It was suggested to make it clearer in regards to the buttons that trigger the timer and the start of the game to avoid confusion. To address this point, a tool tip was added under each symbol to state their purpose. Text saying "start" would be displayed under the play icon when the pop up is closed via clicking on the "x" or on the window outside the content. The cards will be disabled/unclickable until the play icon is clicked in this instance. 
+The deployed site was shared amongst family and friends to obtain user experience feedback. Overall the feedback was positive and the main objectives of the game were achieved, and the criteria set in the user stories were met. It was suggested to make it clearer in regards to the buttons that trigger the timer and the start of the game to avoid confusion. To address this point, a tool tip was added under each symbol to state their purpose. Text saying "start" would be displayed under the play icon when the pop up is closed via clicking on the "x" or on the window outside the content. The cards will be disabled/unclickable until the play icon is clicked in this instance. 
 
 ---
 ## **Bugs**
