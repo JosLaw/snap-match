@@ -144,3 +144,4 @@ The project was deployed to GitHub Pages. The steps below explain the process.
 13. [Alert](https://stackoverflow.com/questions/24768067/display-alert-only-once) - Solution to trigger the alert once
 14. [Timer](https://stackoverflow.com/questions/31036619/timer-goes-twice-as-fast-when-triggered-again) - Solution to the timer going twice as fast
 15. [Shuffle](https://stackoverflow.com/questions/7070054/javascript-shuffle-html-list-element-order) - Code for the shuffle function
+16. [Am I responsive](https://ui.dev/amiresponsive) - Generate screen mockup
