@@ -15,12 +15,15 @@
 
 <body>
     <header>
+        <!-- site title -->
         <h1>Snap Match</h1>
     </header>
 
     <div class="game-area">
+        <!-- clickable icons and tooltips-->
         <div id="playbtn"><span id="tip" class="tool-tip">Start</span><i class="fa-solid fa-play"></i></div>
         <div id="restartbtn"><span class="restart">Restart</span><i class="fa-solid fa-rotate"></i></div>
+        <!-- list containing card deck -->
         <ul class="card-inner" id="card-deck">
             <li class="card ghost">
                 <div class="card-front view"><span>SM</span></div>
@@ -95,10 +98,11 @@
                 </div>
             </li>
         </ul>
-
+        <!-- timer and moves counters -->
         <div class="timer">Timer: 30</div>
         <div class="moves">Moves: 0</div>
 
+        <!-- modal -->
         <div id="popup" class="overlay">
             <div class="popup">
                 <span id="close" class="closebtn">&times;</span>

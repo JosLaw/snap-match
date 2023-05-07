@@ -20,7 +20,7 @@ The initial layout was planned using a programme called balsamiq to create the w
 ## Future Updates
 
 * Add more cards to create a larger game board and increase the difficulty. 
-* Create two modes that increase or decrease the difficulty. This will be achieved by creating two timers, 30 seconds and 60 seconds. The user will have the ability to select which timer they would like to use for the game play.
+* Create two modes that increase or decrease the difficulty. This will be achieved by creating two timers, 30 seconds and 60 seconds. The user will have the ability to select which timer they would like to use for the game play. This was the original concept as seen on the wireframe.
 
 ---
 ## **Features**
@@ -58,6 +58,8 @@ The site has been tested on a variety of devices and browsers to check the funct
 * Laptop on Google Chrome and Microsoft Edge browsers
 * Android mobile phone on Google Chrome browser
 * Apple laptop on Google Chrome
+* Iphone on Google Chrome
+* Kindle on Silk browser
 
 The deployed site was shared amongst family and friends to obtain user experience feedback. Overall the feedback was positive and the main objectives of the game were achieved. It was suggested to make it clearer in regards to the buttons that trigger the timer and the start of the game to avoid confusion. To address this point, a tool tip was added under each symbol to state their purpose. Text saying "start" would be displayed under the play icon when the pop up is closed via clicking on the "x" or on the window outside the content. The cards will be disabled/unclickable until the play icon is clicked in this instance. 
 
@@ -127,7 +129,7 @@ The project was deployed to GitHub Pages. The steps below explain the process.
 4. [Color Generator](https://coolors.co/f28824-ffffff-e6e8e6-ced0ce-191919) - Generate colour for background
 5. [Font Awesome](https://fontawesome.com/) - Icons for the cards
 6. [Emojipedia](https://emojipedia.org/grinning-face-with-smiling-eyes/) - Emoji for the alert messages
-7. [Code Snippets](https://github.com/sandraisrael/Memory-Game-fend) - Code snippets for game functionality and layout of game area
+7. [sandraisrael](https://github.com/sandraisrael/Memory-Game-fend) - Code snippets for game functionality and layout of game area
 8. [Modal](https://www.w3schools.com/howto/howto_css_modals.asp) - Create the modal
 9. [Multiple Functions](https://stackoverflow.com/questions/3910736/how-to-call-multiple-javascript-functions-in-onclick-event) - Code syntax to fire multiple functions
 10. [Countdown Timer](https://www.w3schools.com/jsref/met_win_setinterval.asp) - Code syntax for the timer
